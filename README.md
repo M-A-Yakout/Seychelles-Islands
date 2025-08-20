@@ -1,5 +1,5 @@
 # Seychelles Islands — Simple Static Interface
-
+## URL DEMO : https://m-a-yakout.github.io/Seychelles-Islands/
 **Short Description**
 An Arabic interface for an article page about *Seychelles Islands* with a top bar, search, and sidebar.
 
