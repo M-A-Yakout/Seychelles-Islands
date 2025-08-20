@@ -1,0 +1,957 @@
+/* ===== إعادة الضبط والقواعد الأساسية ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    font-size: 16px; 
+    direction: rtl; 
+    height: 100%; 
+    text-size-adjust: 100%;
+}
+
+body { 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(51, 51, 51); 
+    padding: 0px; 
+    margin: 0px; 
+    font-size: 0.875rem; 
+    height: auto !important; 
+    min-height: 100% !important;
+    font: 16px / 1.4 DroidArabicKufi-Regular, sans-serif, Arial;
+    margin: 0px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { 
+    display: block; 
+}
+
+/* ===== الروابط ===== */
+a { 
+    color: rgb(26, 101, 158); 
+    text-decoration: none; 
+    outline: none; 
+    line-height: inherit; 
+    background: transparent;
+}
+
+a:hover { 
+    text-decoration: none; 
+}
+
+a:active, a:hover { 
+    outline: 0px; 
+}
+
+/* ===== الصور ===== */
+img, a img { 
+    border: none; 
+}
+
+img { 
+    display: inline-block; 
+    vertical-align: middle; 
+    border: 0px;
+    max-width: 100%;
+    height: auto;
+}
+
+svg:not(:root) { 
+    overflow: hidden; 
+}
+
+/* ===== النماذج والعناصر ===== */
+textarea { 
+    height: auto; 
+    min-height: 50px; 
+    overflow: auto;
+}
+
+input { 
+    line-height: normal; 
+}
+
+input[type="checkbox"], input[type="radio"] { 
+    box-sizing: border-box; 
+    padding: 0px; 
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    height: auto; 
+}
+
+input[type="search"]::-webkit-search-cancel-button, 
+input[type="search"]::-webkit-search-decoration { 
+    appearance: none; 
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { 
+    appearance: button; 
+    cursor: pointer; 
+}
+
+button[disabled], html input[disabled] { 
+    cursor: default; 
+}
+
+/* ===== العناوين والفقرات ===== */
+h1, h2, h3, h4, h5, h6, p, hr, ul, ol, dl, dt, dd, form, blockquote, pre, address, fieldset, figure { 
+    margin: 0.625rem 0px; 
+}
+
+h1 { 
+    font-size: 2rem; 
+}
+
+h2 { 
+    font-size: 1.75rem; 
+}
+
+h3 { 
+    font-size: 1.375rem; 
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    line-height: 1.4; 
+}
+
+.font-small { 
+    font-size: 0.8125rem; 
+}
+
+/* ===== الأزرار والنماذج ===== */
+button, input[type="button"], .btn { 
+    display: inline-block; 
+    height: auto; 
+    padding: 0.3125rem 0.625rem; 
+    border-width: 0px 0px 2px; 
+    border-style: none none solid; 
+    border-top-color: initial; 
+    border-right-color: initial; 
+    border-left-color: initial; 
+    border-image: initial; 
+    outline: none; 
+    text-align: center; 
+    text-decoration: none; 
+    cursor: pointer; 
+    font-weight: 700; 
+    font-size: 0.75rem; 
+    line-height: 1.4; 
+    border-bottom-color: rgb(39, 181, 187); 
+    background-color: rgb(51, 68, 78); 
+    color: rgb(255, 255, 255); 
+    white-space: normal; 
+    appearance: none; 
+}
+
+button:hover, input[type="button"]:hover, .btn:hover { 
+    border-bottom: 2px solid rgb(0, 0, 0); 
+    text-decoration: none; 
+}
+
+.btn-lg { 
+    padding: 0.625rem 1.25rem !important; 
+    font-size: 1rem !important; 
+}
+
+.btn-med { 
+    padding: 0.4375rem 0.9375rem !important; 
+    font-size: 0.8125rem !important; 
+}
+
+.btn-sm { 
+    padding: 0.3125rem 0.625rem !important; 
+    font-size: 0.6875rem !important; 
+}
+
+.btn-expand { 
+    display: block; 
+}
+
+.btn.disabled, .btn[disabled] { 
+    background-color: rgb(102, 116, 126); 
+    color: rgba(221, 221, 221, 0.7); 
+    cursor: not-allowed; 
+    opacity: 0.7; 
+}
+
+.btn.disabled:hover, .btn[disabled]:hover { 
+    background-color: rgb(86, 100, 110); 
+}
+
+input[type="text"], .form-field { 
+    width: 100%; 
+    height: 30px; 
+    padding: 5px; 
+    border: 1px solid rgb(204, 204, 204); 
+    font-size: 0.875rem; 
+    line-height: 30px; 
+    color: rgb(0, 0, 0); 
+    box-sizing: border-box; 
+}
+
+input[type="text"]:focus, .form-field:focus { 
+    border: 1px solid rgb(0, 120, 188); 
+}
+
+.form-field.disabled, .form-field[disabled], input[type="text"]:disabled { 
+    background-color: rgb(221, 221, 221); 
+    color: rgba(51, 51, 51, 0.7); 
+    cursor: default; 
+    opacity: 0.7; 
+}
+
+select, .form-select { 
+    width: 100%; 
+    height: auto; 
+    padding: 0px; 
+    border: 1px solid rgb(187, 187, 187); 
+    font-size: 0.875rem; 
+    line-height: 1.4; 
+    color: rgb(0, 0, 0); 
+    box-sizing: border-box; 
+}
+
+select:hover, .form-select:hover { 
+    cursor: pointer; 
+}
+
+select option, .form-select option { 
+    padding: 3px; 
+}
+
+textarea, .form-text-area { 
+    width: 100%; 
+    padding: 5px; 
+    border: 1px solid rgb(187, 187, 187); 
+    font-size: 0.875rem; 
+    line-height: 1.4; 
+    color: rgb(153, 153, 153); 
+    box-sizing: border-box; 
+}
+
+label.error { 
+    display: block; 
+    clear: both; 
+    margin-bottom: 15px; 
+    padding: 5px; 
+    background-color: red; 
+    color: rgb(255, 255, 255); 
+    font-size: 0.8125rem; 
+    font-style: italic; 
+}
+
+/* ===== مسار التنقل ===== */
+.breadcrumbs { 
+    display: block; 
+    overflow: hidden; 
+    margin: 0px 0px 0.9375rem; 
+    list-style-type: none; 
+    padding: 5px; 
+    background-color: rgb(221, 221, 221); 
+    font-size: 14px; 
+    font-weight: 700; 
+    margin-top: 10px;
+}
+
+.breadcrumbs > * { 
+    display: inline; 
+    margin-left: 0.3125rem; 
+}
+
+.breadcrumbs .sign { 
+    line-height: 1.2; 
+    direction: rtl; 
+}
+
+.breadcrumbs .current > * { 
+    color: rgb(51, 51, 51); 
+}
+
+.breadcrumbs a:hover { 
+    text-decoration: underline; 
+}
+
+/* ===== الشبكة والتخطيط ===== */
+.row { 
+    width: 100%; 
+    margin: 0px auto 0.9375rem; 
+}
+
+.wrapper::before, .wrapper::after, .row::before, .row::after { 
+    content: " "; 
+    display: table; 
+}
+
+.wrapper::after, .row::after { 
+    clear: both; 
+}
+
+.row .row:last-child { 
+    margin-bottom: 0px; 
+}
+
+.column, .columns { 
+    width: 100%; 
+    float: right; 
+    padding-right: 0.625rem; 
+    padding-left: 0.625rem; 
+    box-sizing: border-box; 
+}
+
+/* ===== فئات المساعدة ===== */
+.clearfix::before, .clearfix::after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0px; 
+    content: " "; 
+    clear: both; 
+    height: 0px; 
+}
+
+.left { 
+    float: left !important; 
+}
+
+.text-left { 
+    text-align: left !important; 
+}
+
+.text-right { 
+    text-align: right !important; 
+}
+
+.text-center { 
+    text-align: center !important; 
+}
+
+.text-justify { 
+    text-align: justify !important; 
+}
+
+.inline-list li { 
+    float: right; 
+    margin-left: 0.9375rem; 
+}
+
+.inline-list li > * { 
+    display: block; 
+}
+
+.block-list li { 
+    float: none; 
+    padding: 5px; 
+}
+
+.block-list li > * { 
+    display: block; 
+}
+
+.list-disc { 
+    list-style-type: disc !important; 
+}
+
+.list-circle { 
+    list-style-type: circle !important; 
+}
+
+.list-decimal { 
+    list-style-type: decimal !important; 
+}
+
+.list-space { 
+    margin-right: 0.9375rem !important; 
+    padding-right: 1.25rem !important; 
+}
+
+.link-hoverColor:hover { 
+    color: rgb(51, 51, 51); 
+}
+
+.link-hoverLine:hover { 
+    text-decoration: underline; 
+}
+
+
+li {
+            border-bottom: 1px solid #ccc; /* خط خفيف أسفل كل عنصر */
+            padding-bottom: 5px; /* مسافة تحت النص */
+            margin-bottom: 5px; /* مسافة بين العناصر */
+        }
+        li:last-child {
+            border-bottom: none; /* إزالة الخط من العنصر الأخير */
+        }
+
+/* ===== الهيدر ===== */
+.header { 
+    height: 60px; 
+    position: fixed; 
+    top: 0px; 
+    left: 0px; 
+    margin: auto; 
+    background-color: rgb(255, 255, 255); 
+    z-index: 4000 !important; 
+}
+
+/* إضافة: حرك أيقونة القائمة شوية لأسفل */
+.header .menu-icon + ul img,
+.header > ul img {
+    position: relative;
+    top: 15px; /* عدّل القيمة حسب الحاجة: زِد لأسفل أكثر أو أنقص لتصعد */
+}
+
+.header.sticky, .header.inside { 
+    margin-top: -10px;
+    background-color: rgb(29, 131, 135); 
+}
+
+.header .logo-box { 
+    position: relative; 
+    margin-top: 12px; 
+}
+
+.header .logo { 
+    width: 112px; 
+    height: 36px; 
+    display: inline-block; 
+    background-position: 0px -133px; 
+}
+
+.header .logo svg { 
+    width: 112px; 
+}
+
+.header .homepage-logo svg { 
+    width: 100% !important; 
+    height: unset !important; 
+}
+
+.header .slogan { 
+    display: inline-block; 
+    margin: 0px 7px 0px 0px; 
+    vertical-align: middle; 
+    font-size: 12px; 
+    color: rgb(43, 43, 43); 
+    font-weight: 400; 
+}
+
+.header.sticky .slogan, .header.inside .slogan { 
+    color: rgb(255, 255, 255); 
+}
+
+.header.sticky .row { 
+    width: 990px; 
+}
+
+.header.sticky .logo, .header.inside .logo { 
+    background-position: 0px -78px; 
+}
+
+/* ===== البحث ===== */
+.search.inside { 
+    margin-top: 12px; 
+}
+
+.search.inside .field, .search.home.sticky .field { 
+    width: 500px; 
+    height: 36px; 
+    outline: none; 
+}
+
+.search.inside .btn, .search.home.sticky .btn { 
+    width: 56px; 
+    height: 36px; 
+}
+
+.search.home.sticky .search-results, .search-results { 
+    position: absolute; 
+    top: 36px; 
+    left: 30px; 
+    right: 0px; 
+    border-width: 1px 1px 0px; 
+    border-style: solid solid none; 
+    border-top-color: rgb(221, 221, 221); 
+    border-right-color: rgb(221, 221, 221); 
+    border-left-color: rgb(221, 221, 221); 
+    border-image: initial; 
+    border-bottom-color: initial; 
+    background-color: rgb(255, 255, 255); 
+    z-index: 9999; 
+}
+
+.search-results a { 
+    display: block; 
+    padding: 5px; 
+    border-bottom: 1px solid rgb(248, 248, 248); 
+    text-align: right; 
+    color: rgb(51, 51, 51); 
+}
+
+.search-results a:hover { 
+    background-color: rgb(248, 248, 248); 
+}
+
+.search.home .search-results { 
+    top: 50px; 
+    left: 0px; 
+}
+
+/* ===== المحتوى الرئيسي ===== */
+.container { 
+    padding: 80px 0px 20px; 
+}
+
+.inside-container { 
+    width: 968px; 
+    padding: 10px 0px; 
+    border: 1px solid rgb(221, 221, 221); 
+    background-color: rgb(255, 255, 255); 
+}
+
+.block-content { 
+    width: 990px; 
+    margin: auto; 
+}
+
+/* ===== المقالات ===== */
+.article { 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid rgb(51, 68, 78); 
+}
+
+.article .title { 
+    margin-top: 0px; 
+    font-size: 45px; 
+}
+
+.article-body .toc { 
+    overflow: hidden; 
+}
+
+.article-body .toc #toctitle { 
+    background-color: rgb(241, 239, 239); 
+    padding: 9px 13px; 
+    box-sizing: border-box; 
+    border-bottom: 2px solid rgb(29, 131, 135); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.article-body .toc #toctitle h2 { 
+    color: rgb(0, 0, 0); 
+    font-size: 1.125em; 
+    font-weight: 700; 
+    line-height: 30px; 
+    margin: 0px; 
+}
+
+.article-body .toc > ul { 
+    border-bottom: 2px solid rgb(224, 224, 224); 
+    overflow: hidden; 
+    opacity: 1; 
+    max-height: 800px; 
+}
+
+.article-body .toc ul { 
+    padding: 0px; 
+    margin: 0px; 
+    list-style-type: none; 
+}
+
+.article-body .toc ul li { 
+    margin: 0px 13px 5px; 
+}
+
+.article-body .toc ul li .tocnumber { 
+    color: rgb(142, 141, 141); 
+    margin-left: 8px; 
+}
+
+.article-body .toc ul li .tocnumber::after { 
+    content: "."; 
+}
+
+.article-body .toc ul li a { 
+    display: block; 
+    font-size: 1em; 
+    line-height: 2.125em; 
+    font-weight: 700; 
+}
+
+.article-body .toc ul li a:hover { 
+    color: rgb(51, 51, 51); 
+}
+
+.article-img { 
+    width: 614px; 
+    height: 292px; 
+    overflow: hidden; 
+    margin: 10px 0px; 
+    text-align: center; 
+}
+
+.article-author { 
+    display: flex; 
+    padding: 0px 0px 8px; 
+    align-items: center; 
+}
+
+.article-author .picture { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(243, 243, 243); 
+    width: 58px; 
+    min-width: 58px; 
+    height: 58px; 
+    border-radius: 100%; 
+    overflow: hidden; 
+    margin-left: 8px; 
+}
+
+.article-author .picture img { 
+    max-width: 58px; 
+    max-height: 58px; 
+}
+
+.article-author .info { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    font-size: var(--article-font-size); 
+    padding-top: 0px !important; 
+}
+
+.article-author .info p { 
+    font-size: 0.875em; 
+    margin: 0px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    line-height: 1.688em; 
+}
+
+.article-author .info p a { 
+    color: rgb(26, 101, 158); 
+    line-height: 2em; 
+    text-decoration: none; 
+}
+
+.article-text { 
+    overflow: hidden; 
+    font-size: 16px; 
+    line-height: 1.8; 
+}
+
+.article-text a { 
+    color: rgb(24, 92, 145); 
+}
+
+.article-text p a { 
+    color: rgb(69, 134, 255); 
+}
+
+.article-text ul a { 
+    color: rgb(69, 134, 255); 
+}
+
+.article-text .toc a { 
+    color: rgb(24, 92, 145); 
+}
+
+.article-text ul { 
+    padding-right: 21px; 
+}
+
+/* ===== الشريط الجانبي ===== */
+.side-box { 
+    padding: 10px 10px 0px; 
+}
+
+.side-box .top-title { 
+    display: block; 
+    padding-bottom: 5px; 
+    border-bottom: 1px solid rgb(204, 204, 204); 
+    font-size: 18px; 
+}
+
+.side-box .list { 
+    overflow: hidden; 
+    padding: 0px; 
+    list-style-type: none; 
+}
+
+.side-box .list.vertical li { 
+    height: 135px; 
+    float: right; 
+    overflow: hidden; 
+    margin-bottom: 5px; 
+    padding: 0px 5px; 
+    box-sizing: border-box; 
+}
+
+.side-box .list.horizontal li { 
+    display: block; 
+    overflow: hidden; 
+    margin-bottom: 10px; 
+}
+
+.side-box .list li a { 
+    display: block; 
+    overflow: hidden; 
+    font-weight: 700; 
+    line-height: 1.8; 
+    overflow-wrap: break-word; 
+}
+
+.side-box .list li img, .side-box .list li .img { 
+    width: 128px; 
+    height: 75px; 
+    display: block; 
+    margin: 0px auto; 
+    border-radius: 5px 5px 0px 0px; 
+    background-color: rgb(73, 203, 210); 
+}
+
+.side-box .list li .title { 
+    display: block; 
+    overflow: hidden; 
+    font-size: 16px; 
+    overflow-wrap: break-word; 
+}
+
+.side-box .list li a:hover { 
+    color: rgb(51, 51, 51); 
+}
+
+.side-box .list.vertical li .title { 
+    height: 55px; 
+    line-height: 26px; 
+}
+
+/* ===== الفوتر ===== */
+.footer { 
+    padding: 10px 0px 0px; 
+    border-top: 1px solid rgb(221, 221, 221); 
+    font-size: 14px; 
+    background: rgb(248, 248, 248);
+}
+
+.footer .newsletter form { 
+    margin: 15px 0px 0px; 
+}
+
+.footer .newsletter label { 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.footer .newsletter input { 
+    float: right; 
+}
+
+.footer .newsletter .field { 
+    width: 240px; 
+}
+
+.footer .newsletter .btn { 
+    height: 30px; 
+    border: 0px none; 
+    background-color: rgb(39, 181, 187); 
+}
+
+.footer .newsletter .btn:hover { 
+    border: 0px none; 
+}
+
+.footer a:hover { 
+    text-decoration: underline; 
+}
+
+.footer .links { 
+    float: left; 
+    margin: 0px 60px 0px 10px; 
+}
+
+.footer .links a { 
+    display: block; 
+    margin-right: 10px; 
+    color: rgb(51, 51, 51); 
+    line-height: 36px; 
+}
+
+.footer .copyrights { 
+    padding: 0px; 
+    margin: 10px 0px; 
+    color: rgb(84, 84, 84); 
+}
+
+footer .poweredBy { 
+    padding: 0px; 
+    margin: 10px 0px; 
+    display: flex; 
+}
+
+footer .poweredByText { 
+    margin-inline: 2px; 
+    margin-top: 6px; 
+    color: rgb(84, 84, 84); 
+}
+
+footer .social-media { 
+    margin: 10px 0px; 
+}
+
+/* ===== الوسائط ===== */
+@media screen and (min-width: 970px) {
+    .large-1 { width: 8.33333%; }
+    .large-3 { width: 25%; }
+    .large-4 { width: 33.3333%; }
+    .large-6 { width: 50%; }
+    .large-7 { width: 58.3333%; }
+    .large-8 { width: 66.6667%; }
+    .large-9 { width: 75%; }
+    .large-10 { width: 83.3333%; }
+    .large-11 { width: 91.6667%; }
+    .large-12 { width: 100%; }
+    .hidden-desktop { display: none !important; }
+    .visible-desktop { display: block !important; }
+    
+    .header { right: 0px; transition: 0.5s; }
+    .header.sticky { transition: 1s; }
+    .header.home .menu-icon { display: none; }
+    .header .logo { vertical-align: bottom; }
+    .top-nav { z-index: 999; }
+    .interactivity .share { opacity: 1 !important; }
+}
+
+@media screen and (max-width: 969px) {
+    img { max-width: 100%; height: auto; }
+    .header { width: 100%; }
+    .header.sticky .row, .block-content { width: 100%; }
+    .header .slogan { position: absolute; bottom: 10px; }
+    .header.sticky .slogan { display: none; }
+    
+    .search .btn { width: 20%; max-width: 54px; position: absolute; top: 0px; right: 0px; }
+    .search .field { padding-right: 60px; line-height: 30px; width: 100% !important; }
+    .search.inside.search-onMobile .field { padding-right: 54px; }
+    
+    .menu-icon .line { background-color: rgb(39, 181, 187); }
+    .search.home { right: 95px; }
+    
+    .hidden-mobile { display: none !important; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .medium-1 { width: 8.33333%; }
+    .medium-2 { width: 16.6667%; }
+    .medium-3 { width: 25%; }
+    .medium-6 { width: 50%; }
+    .medium-9 { width: 75%; }
+    .medium-10 { width: 83.3333%; }
+    .medium-11 { width: 91.6667%; }
+    .medium-12 { width: 100%; }
+    .hidden-tablet { display: none !important; }
+}
+
+@media screen and (max-width: 767px) {
+    h1 { font-size: 1.375rem; }
+    h2 { font-size: 1.125rem; }
+    h3 { font-size: 1rem; }
+    h1, h2, h3, h4, h5, h6 { line-height: 1.4; }
+    
+    .small-1 { width: 8.33333%; }
+    .small-2 { width: 16.6667%; }
+    .small-3 { width: 25%; }
+    .small-4 { width: 33.3333%; }
+    .small-5 { width: 41.6667%; }
+    .small-6 { width: 50%; }
+    .small-7 { width: 58.3333%; }
+    .small-8 { width: 66.6667%; }
+    .small-9 { width: 75%; }
+    .small-10 { width: 83.3333%; }
+    .small-11 { width: 91.6667%; }
+    .small-12 { width: 100%; }
+    
+    .header { height: auto; padding-bottom: 10px; }
+    .header.sticky { height: 50px; padding-bottom: 0px; }
+    
+    .search.inside { margin: 0px; }
+    .search-results { left: 0px; }
+    
+    .article .title { font-size: 24px; }
+    .article-img { display: none; }
+    .related-articles-list1 { display: none; }
+    .related-articles-list1_mobile { display: block; }
+    
+    .footer { position: static !important; height: 100%; }
+}
+
+/* ===== أيقونات ===== */
+.categoriesNav, .writeNav, .browseNav, .search-loading .logo, .social-media a, 
+.interactivity .share a, .interactivity .views .icon, .related-articles-list1 .icon, 
+.write-article-list ul li .icon, .side-box .list li .img, .categories-list .img, .notify a { 
+    background-image: url("menu-svgrepo-com.svg"); 
+    background-repeat: no-repeat; 
+}
+
+#toctitle {
+    background-color: rgb(241, 239, 239);
+    padding: 9px 13px;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(29, 131, 135);
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search .btn, .search.home.sticky .btn { 
+    background-image: url("/assets/images/search.svg"); 
+    background-repeat: no-repeat; 
+    background-position: 12px 4px; 
+    background-size: 30px 30px; 
+}
+
+.home.search .btn { 
+    background-position: 7px 5px; 
+    background-size: 40px 40px; 
+}
+
+@media screen and (min-width: 970px) {
+    .header .logo, .header.sticky .logo, .header.inside .logo { 
+        background-repeat: no-repeat; 
+        background-size: 200px 272px; 
+    }
+    .header .logo { background-position: 0px -94px; }
+    .header.sticky .logo, .header.inside .logo { background-position: 0px -42px; }
+}
+
+/* Make the search submit button sit inside the search input and be vertically centered */
+.search { position: relative; }
+.search .field { padding-right: 52px; box-sizing: border-box; }
+.search .btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+/* Ensure consistency on narrow screens where earlier rules may set different values */
+@media screen and (max-width: 969px) {
+    .search .field { padding-right: 54px; }
+    .search .btn { right: 6px; width: 36px; height: 36px; }
+}
